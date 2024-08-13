@@ -22,6 +22,7 @@ public class FindCharacterFrequency4 {
     }
 
     public static void main(String[] args) {
+
         findCharacterFrequency("aaniiisssha");
     }
 }

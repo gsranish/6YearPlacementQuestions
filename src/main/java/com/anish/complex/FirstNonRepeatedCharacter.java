@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstNonRepeatedCharacter {
+
     public static void main(String[] args) {
         String str ="Coforge is Software Company";
 

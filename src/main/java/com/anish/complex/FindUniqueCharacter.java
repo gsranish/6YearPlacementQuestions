@@ -23,6 +23,7 @@ public class FindUniqueCharacter {
     }
 
     public static void main(String[] args) {
+
         System.out.println(" FindUniqueCharacter Java File ");
         findUniqueCharacter("Anish is a good boy");
     }

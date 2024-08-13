@@ -12,6 +12,7 @@ public class FindAllUniqueCharacters {
     }
 
     public static void main(String[] args) {
+
         System.out.println("FindUniqueCharacters");
         findCharacterFrequency("anish is anish good boy");
     }

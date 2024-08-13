@@ -15,6 +15,7 @@ public class CheckUniqueCharIntoString {
 
     }
     public static void main(String[] args) {
+
         findCharacterFrequency("banish ani golu");
     }
 

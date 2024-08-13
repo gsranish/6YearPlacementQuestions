@@ -14,6 +14,7 @@ public class FindCharacterFrequency2 {
         return inputChar;
     }
     public static void main(String[] args) {
+
         Character inputChar = 'a';
         findCharacterFrequency("anisha",inputChar);
     }
