@@ -36,7 +36,7 @@ public class EvenOddFilter {
         }
     }
     
-    void main(String[] args) { 
+    public static void main(String[] args) {
         getEvenOddNumbers1(listOfIntegers);
         System.out.println("In other ways Internet method ");
         getEvenOddNumbers2(listOfIntegers);
