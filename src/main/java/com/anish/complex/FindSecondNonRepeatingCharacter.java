@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static java.lang.System.out;
+
 public class FindSecondNonRepeatingCharacter {
 
     public static Character findSecondNonRepeatingCharacter(String input) {
