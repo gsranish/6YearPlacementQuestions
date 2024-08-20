@@ -1,4 +1,4 @@
-package com.anish;
+package com.anish.asyncApiCall;
 
 import static java.lang.String.format;
 
@@ -7,6 +7,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiFunction;
 
+import com.anish.Purchase;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
