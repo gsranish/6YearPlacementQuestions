@@ -22,7 +22,7 @@ public class FindSecondNonRepeatingCharacter {
 
     public static void main(String[] args) {
 
-        String input = "agbxfdrrrgggughghgffidsassdfg";
+        String input = "anishgodsia";
         Character secondNonRepeatingChar = findSecondNonRepeatingCharacter(input);
         if (secondNonRepeatingChar != null) {
             System.out.println("Second non-repeating character: " + secondNonRepeatingChar);

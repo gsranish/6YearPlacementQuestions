@@ -14,6 +14,6 @@ public class FindCharacterFrequency3 {
 
     public static void main(String[] args) {
 
-        findCharacterFrequency("aniissha");
+        findCharacterFrequency("aniissha  golu");
     }
 }

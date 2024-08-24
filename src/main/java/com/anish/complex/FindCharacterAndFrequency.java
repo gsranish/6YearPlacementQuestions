@@ -1,9 +1,9 @@
 package com.anish.complex;
 
-public class FindCharacterFrequency2 {
+public class FindCharacterAndFrequency {
 
     // print the character and their count
-    static Character findCharacterFrequency(String inputString, Character inputChar){
+    static Character findCharacterAndFrequency(String inputString, Character inputChar){
         int count = 0;
         for(char ch : inputString.toCharArray()){
             if(inputChar.equals(ch)){
@@ -16,7 +16,7 @@ public class FindCharacterFrequency2 {
     public static void main(String[] args) {
 
         Character inputChar = 'a';
-        findCharacterFrequency("anisha",inputChar);
+        findCharacterAndFrequency("anisha",inputChar);
     }
 
 }
