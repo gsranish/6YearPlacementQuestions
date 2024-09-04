@@ -16,11 +16,15 @@ public class FirstNonRepeatedCharacter {
         }
         char character = map.entrySet().stream().filter(i->i.getValue()==1).findFirst().get().getKey();
         System.out.println("First Way - > " + character);
+
+
         // In other ways
         Character character1 = input.chars().mapToObj(c -> (char) c)
                 .filter(ch -> input.indexOf(ch) == input.lastIndexOf(ch)).skip(0)
                 .findFirst().orElse(null);
         System.out.println( "Second Way - > " + character1);
+
+
         // In other ways
         Character result = input.chars() // Stream of String
                 .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) // First convert to Character object and then to lowercase
