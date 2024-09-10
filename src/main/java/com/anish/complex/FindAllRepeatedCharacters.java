@@ -10,7 +10,7 @@ public class FindAllRepeatedCharacters {
 
         String str ="Coforge Software Company";
         List<Character> charlist = str.chars()
-                .filter(c->!Character.isWhitespace(c))
+                .filter(c-> !Character.isWhitespace(c))
                 .mapToObj(c -> (char) c)
                 .filter(ch -> str.indexOf(ch) != str.lastIndexOf(ch))
                 .distinct().sorted().toList();
