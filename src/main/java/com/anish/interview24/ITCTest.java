@@ -1,4 +1,4 @@
-package com.anish;
+package com.anish.interview24;
 
 import java.util.Arrays;
 import java.util.List;
