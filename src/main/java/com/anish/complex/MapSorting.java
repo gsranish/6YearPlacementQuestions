@@ -10,10 +10,17 @@ public class MapSorting {
 
     public static <K, V extends Comparable<V>> Map<K, V> sortByValueDescending(Map<K, V> map) {
 
+        // Sorting based on Key
+//        return map.entrySet()
+//                .stream()
+//                .sorted( Map.Entry.comparingByValue(Comparator.naturalOrder()) )
+//                .collect(Collectors.toMap( Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new ));
+
+        // Sorting based on Value
         return map.entrySet()
                 .stream()
                 .sorted( Map.Entry.comparingByValue(Comparator.naturalOrder()) )
-                .collect(Collectors.toMap( Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new ));
+                .collect(Collectors.toMap( Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new ));
     }
 
     public static void main(String[] args) {

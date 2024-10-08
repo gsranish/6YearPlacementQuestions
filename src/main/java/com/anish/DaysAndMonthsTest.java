@@ -3,7 +3,7 @@ package com.anish;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class CTZTest {
+public class DaysAndMonthsTest {
 
     public static void main(String[] args) {
         LocalDate startDate = LocalDate.of(2024,11,20);
