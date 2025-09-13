@@ -11,12 +11,14 @@ public class ParentRefrenceCheck {
 
 class Parent
 {
-    void m()
-    {}
+    void m() {
+        System.out.println("Parent m");
+    }
 }
 
 class Child extends Parent
 {
-    void n()
-    {}
+    void n() {
+        System.out.println("Child n");
+    }
 }

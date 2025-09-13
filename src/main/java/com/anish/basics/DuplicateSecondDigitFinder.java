@@ -38,6 +38,6 @@ public class DuplicateSecondDigitFinder {
         return groupedBySecondDigit.values().stream()
                 .filter(group -> group.size() > 1)
                 .flatMap(List::stream)
-                .collect(Collectors.toList());
+                .toList();
     }
 }

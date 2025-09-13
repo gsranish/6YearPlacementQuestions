@@ -42,7 +42,7 @@ public class TwiceAppearInList {
     public static void main(String[] args) {
         // Test case 1: Array with duplicates
         int[] nums1 = {1, 2, 3, 1};
-        System.out.println("Array [1, 2, 3, 1] contains duplicates: " + containsDuplicate(nums1));
+        System.out.println("Array [1, 2, 3, 1] contains duplicates: " + containsDuplicate1(nums1));
         
         // Test case 2: Array without duplicates
         int[] nums2 = {1, 2, 3, 4};
@@ -50,7 +50,7 @@ public class TwiceAppearInList {
         
         // Test case 3: Empty array
         int[] nums3 = {};
-        System.out.println("Empty array contains duplicates: " + containsDuplicate(nums3));
+        System.out.println("Empty array can't duplicates: " + containsDuplicate(nums3));
         
         // Test case 4: Null array (should handle gracefully)
         try {

@@ -9,5 +9,9 @@ public class SubClass extends SuperClass {
     public static void main(String[] args) {
         SubClass subClass = new SubClass();
         subClass.exampleMethod();
+        SuperClass superClass = new SuperClass();
+        superClass.exampleMethod();
+        SuperClass superClass2 = new SubClass();
+        superClass2.exampleMethod();
     }
 }

@@ -17,6 +17,8 @@ public class FrequencyChar {
     
     private static void getFrequencyString(List<String> inputs){
         Map<String, Long> stationeryCountMap = inputs.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        List<String> stationeryList = stationeryCountMap.entrySet().stream().map(Map.Entry::getKey).collect(Collectors.toList());
+        System.out.println(stationeryList);
     }
 
     public static void main(String[] args) {
