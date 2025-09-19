@@ -1,5 +1,6 @@
 package com.anish.complex;
 
+import java.util.Arrays;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -12,8 +13,13 @@ public class FindCharacterFrequency3 {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
     }
 
+    static void findCharacterFrequency2(String inputString){
+        System.out.println(Arrays.stream(inputString.split(""))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
+    }
     public static void main(String[] args) {
 
         findCharacterFrequency("aniissha  golu");
+        findCharacterFrequency2("aniissha  golu");
     }
 }

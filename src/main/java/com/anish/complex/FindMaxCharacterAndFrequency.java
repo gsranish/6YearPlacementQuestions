@@ -13,8 +13,6 @@ public class FindMaxCharacterAndFrequency {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet();
-        // int maxCount = entries.stream().filter(entry -> entry.getValue() == );
-        // System.out.println(maxCount);
         Optional<Character> maxChar =  entries.stream()
                 .max(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey);
