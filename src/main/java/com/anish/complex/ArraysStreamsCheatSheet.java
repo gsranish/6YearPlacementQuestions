@@ -5,17 +5,15 @@ import java.util.stream.*;
 
 public class ArraysStreamsCheatSheet {
 
-    // 1. Second Largest Element
-    static int kthLargetNumber = 1;
-    public static void secondLargest(int[] arr) {
+    // 1. Kth Largest Element
+    public static void kthLargest(int[] arr, int k) {
         int result = Arrays.stream(arr)
                 .boxed()
-                .distinct()
                 .sorted(Comparator.reverseOrder())
-                .skip(kthLargetNumber)
+                .skip(k - 1)
                 .findFirst()
                 .orElseThrow();
-        System.out.println("Second Largest: " + result);
+        System.out.println(k + "th Largest: " + result);
     }
 
     // 2. Remove Duplicates
@@ -97,17 +95,7 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Merged & Sorted: " + Arrays.toString(merged));
     }
 
-    // 11. Kth Largest Element
-    public static void kthLargest(int[] arr, int k) {
-        int result = Arrays.stream(arr).boxed()
-                .sorted(Comparator.reverseOrder())
-                .skip(k - 1)
-                .findFirst()
-                .orElseThrow();
-        System.out.println(k + "th Largest: " + result);
-    }
-
-    // 12. Sliding Window Max Sum
+    // 11. Sliding Window Max Sum
     public static void slidingWindowMaxSum(int[] arr, int k) {
         int maxSum = IntStream.rangeClosed(0, arr.length - k)
                 .map(i -> Arrays.stream(arr, i, i + k).sum())
@@ -116,13 +104,13 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Max sum of " + k + " consecutive: " + maxSum);
     }
 
-    // 13. Missing Number in 1..N
+    // 12. Missing Number in 1..N
     public static void missingNumber(int[] arr, int n) {
         int missing = IntStream.rangeClosed(1, n).sum() - Arrays.stream(arr).sum();
         System.out.println("Missing Number: " + missing);
     }
 
-    // 14. Pair Sum Problem
+    // 13. Pair Sum Problem
     public static void pairSum(int[] arr, int target) {
         List<List<Integer>> pairs = IntStream.range(0, arr.length)
                 .boxed()
@@ -133,7 +121,7 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Pairs with sum " + target + ": " + pairs);
     }
 
-    // 15. Top N Frequent Elements
+    // 14. Top N Frequent Elements
     public static void topNFrequent(int[] arr, int n) {
         List<Integer> topN = Arrays.stream(arr).boxed()
                 .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
@@ -145,14 +133,14 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Top " + n + " frequent: " + topN);
     }
 
-    // 16. Parallel Stream Processing
+    // 15. Parallel Stream Processing
     public static void parallelProcessing() {
         int[] bigArray = new Random().ints(1_000_0, 1, 100).toArray();
         long evenCount = Arrays.stream(bigArray).parallel().filter(n -> n % 2 == 0).count();
         System.out.println("Even Numbers Count (Parallel): " + evenCount);
     }
 
-    // 17. Group Numbers by Even/Odd
+    // 16. Group Numbers by Even/Odd
     public static void groupEvenOdd(int[] arr) {
         Map<String, List<Integer>> grouped = Arrays.stream(arr)
                 .boxed()
@@ -160,13 +148,13 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Grouped: " + grouped);
     }
 
-    // 18. Average of Squares
+    // 17. Average of Squares
     public static void averageOfSquares(int[] arr) {
         double avg = Arrays.stream(arr).boxed().collect(Collectors.averagingInt(n -> n * n));
         System.out.println("Average of Squares: " + avg);
     }
 
-    // 19. Max Subarray Sum (Kadane’s using Streams)
+    // 18. Max Subarray Sum (Kadane’s using Streams)
     public static void maxSubarraySum(int[] arr) {
         int maxSum = IntStream.range(0, arr.length)
                 .mapToObj(i -> IntStream.rangeClosed(i, arr.length - 1)
@@ -177,7 +165,7 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Max Subarray Sum: " + maxSum);
     }
 
-    // 20. Find All Subarrays with Given Sum
+    // 19. Find All Subarrays with Given Sum
     public static void subarraysWithSum(int[] arr, int target) {
         List<List<Integer>> subarrays = IntStream.range(0, arr.length)
                 .boxed()
@@ -196,7 +184,6 @@ public class ArraysStreamsCheatSheet {
         int[] arr2 = {2, 3, 6, 5};
         String[] words = {"Java", "Stream", "Programming", "Interview"};
 
-        secondLargest(new int[]{5, 2, 9, 1, 7, 9});
         removeDuplicates(arr);
         frequencyCount(arr);
         findDuplicates(arr);
