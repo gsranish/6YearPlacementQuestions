@@ -19,7 +19,8 @@ public class EmployeeStreamExamples {
         public Address(String city, String state, String type) {
             this.city = city; this.state = state; this.type = type;
         }
-        @Override public String toString() { return String.format("%s (%s) - %s", city, state, type); }
+        @Override
+        public String toString() { return String.format("%s (%s) - %s", city, state, type); }
     }
 
     static class Employee {
@@ -37,7 +38,8 @@ public class EmployeeStreamExamples {
         public Employee(int id, String name, int age, double salary, List<Address> addresses) {
             this.id = id; this.name = name; this.age = age; this.salary = salary; this.addresses = addresses;
         }
-        @Override public String toString() {
+        @Override
+        public String toString() {
             return String.format("Employee{id=%d,name=%s,age=%d,salary=%.2f,addresses=%s}", id, name, age, salary, addresses);
         }
     }
