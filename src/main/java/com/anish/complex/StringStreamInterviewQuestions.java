@@ -235,11 +235,11 @@ public class StringStreamInterviewQuestions {
     // 30. Check if string contains only digits
     static void onlyDigits(String str) {
         boolean res = str.chars().allMatch(Character::isDigit);
-        System.out.println(str + " only digits? " + res);
+        System.out.println(str + " only digits ? " + res);
     }
 
     public static void main(String[] args) {
-        String test = "Java streams are powerful powerful and flexible";
+        String test = "Java streams are powerful more powerful and flexible";
 
         charFrequency(test);
         wordFrequency(test);
