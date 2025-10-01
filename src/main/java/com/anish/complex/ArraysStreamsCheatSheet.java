@@ -15,13 +15,11 @@ public class ArraysStreamsCheatSheet {
                 .orElseThrow();
         System.out.println(k + "th Largest: " + result);
     }
-
     // 2. Remove Duplicates
     public static void removeDuplicates(int[] arr) {
         int[] unique = Arrays.stream(arr).distinct().toArray();
         System.out.println("Unique: " + Arrays.toString(unique));
     }
-
     // 3. Frequency of Each Element
     public static void frequencyCount(int[] arr) {
         Map<Integer, Long> freq = Arrays.stream(arr)
@@ -29,7 +27,6 @@ public class ArraysStreamsCheatSheet {
                 .collect(Collectors.groupingBy(e -> e, Collectors.counting()));
         System.out.println("Frequency: " + freq);
     }
-
     // 4. Find Duplicates Only
     public static void findDuplicates(int[] arr) {
         Set<Integer> duplicates = Arrays.stream(arr)
@@ -41,13 +38,11 @@ public class ArraysStreamsCheatSheet {
                 .collect(Collectors.toSet());
         System.out.println("Duplicates: " + duplicates);
     }
-
     // 5. Sum of Even Numbers
     public static void sumEven(int[] arr) {
         int sum = Arrays.stream(arr).filter(n -> n % 2 == 0).sum();
         System.out.println("Sum of Even: " + sum);
     }
-
     // 6. Longest String
     public static void longestString(String[] words) {
         String longest = Arrays.stream(words)
@@ -55,7 +50,6 @@ public class ArraysStreamsCheatSheet {
                 .orElse("");
         System.out.println("Longest String: " + longest);
     }
-
     // 7. First Non-Repeating Element
     public static void firstNonRepeating(int[] arr) {
         int result = Arrays.stream(arr).boxed()
@@ -67,7 +61,6 @@ public class ArraysStreamsCheatSheet {
                 .orElse(-1);
         System.out.println("First Non-Repeating: " + result);
     }
-
     // 8. Rotate Array k times
     public static void rotateArray(int[] arr, int k) {
         int n = arr.length;
@@ -76,7 +69,6 @@ public class ArraysStreamsCheatSheet {
                 .toArray();
         System.out.println("Rotated: " + Arrays.toString(rotated));
     }
-
     // 9. Common Elements in Two Arrays
     public static void commonElements(int[] arr1, int[] arr2) {
         Set<Integer> common = Arrays.stream(arr1)
@@ -85,7 +77,6 @@ public class ArraysStreamsCheatSheet {
                 .collect(Collectors.toSet());
         System.out.println("Common Elements: " + common);
     }
-
     // 10. Merge & Sort Two Arrays
     public static void mergeAndSort(int[] arr1, int[] arr2) {
         int[] merged = IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2))
@@ -94,7 +85,6 @@ public class ArraysStreamsCheatSheet {
                 .toArray();
         System.out.println("Merged & Sorted: " + Arrays.toString(merged));
     }
-
     // 11. Sliding Window Max Sum
     public static void slidingWindowMaxSum(int[] arr, int k) {
         int maxSum = IntStream.rangeClosed(0, arr.length - k)
@@ -103,13 +93,11 @@ public class ArraysStreamsCheatSheet {
                 .orElse(Integer.MIN_VALUE);
         System.out.println("Max sum of " + k + " consecutive: " + maxSum);
     }
-
     // 12. Missing Number in 1..N
     public static void missingNumber(int[] arr, int n) {
         int missing = IntStream.rangeClosed(1, n).sum() - Arrays.stream(arr).sum();
         System.out.println("Missing Number: " + missing);
     }
-
     // 13. Pair Sum Problem
     public static void pairSum(int[] arr, int target) {
         List<List<Integer>> pairs = IntStream.range(0, arr.length)
@@ -120,7 +108,6 @@ public class ArraysStreamsCheatSheet {
                 .toList();
         System.out.println("Pairs with sum " + target + ": " + pairs);
     }
-
     // 14. Top N Frequent Elements
     public static void topNFrequent(int[] arr, int n) {
         List<Integer> topN = Arrays.stream(arr).boxed()
@@ -132,14 +119,12 @@ public class ArraysStreamsCheatSheet {
                 .toList();
         System.out.println("Top " + n + " frequent: " + topN);
     }
-
     // 15. Parallel Stream Processing
     public static void parallelProcessing() {
         int[] bigArray = new Random().ints(1_000_0, 1, 100).toArray();
         long evenCount = Arrays.stream(bigArray).parallel().filter(n -> n % 2 == 0).count();
         System.out.println("Even Numbers Count (Parallel): " + evenCount);
     }
-
     // 16. Group Numbers by Even/Odd
     public static void groupEvenOdd(int[] arr) {
         Map<String, List<Integer>> grouped = Arrays.stream(arr)
@@ -147,13 +132,11 @@ public class ArraysStreamsCheatSheet {
                 .collect(Collectors.groupingBy(n -> n % 2 == 0 ? "Even" : "Odd"));
         System.out.println("Grouped: " + grouped);
     }
-
     // 17. Average of Squares
     public static void averageOfSquares(int[] arr) {
         double avg = Arrays.stream(arr).boxed().collect(Collectors.averagingInt(n -> n * n));
         System.out.println("Average of Squares: " + avg);
     }
-
     // 18. Max Subarray Sum (Kadane’s using Streams)
     public static void maxSubarraySum(int[] arr) {
         int maxSum = IntStream.range(0, arr.length)
@@ -164,7 +147,6 @@ public class ArraysStreamsCheatSheet {
                 .orElse(Integer.MIN_VALUE);
         System.out.println("Max Subarray Sum: " + maxSum);
     }
-
     // 19. Find All Subarrays with Given Sum
     public static void subarraysWithSum(int[] arr, int target) {
         List<List<Integer>> subarrays = IntStream.range(0, arr.length)
@@ -176,14 +158,12 @@ public class ArraysStreamsCheatSheet {
                 .toList();
         System.out.println("Subarrays with sum " + target + ": " + subarrays);
     }
-
     // Main to demo all
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 4, 5};
         int[] arr1 = {1, 3, 5};
         int[] arr2 = {2, 3, 6, 5};
         String[] words = {"Java", "Stream", "Programming", "Interview"};
-
         removeDuplicates(arr);
         frequencyCount(arr);
         findDuplicates(arr);

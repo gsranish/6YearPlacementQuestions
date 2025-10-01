@@ -75,7 +75,6 @@ public class EmployeeStreamExamples {
                 .collect(toList());
         System.out.println(cities);
     }
-
     // 2) Employees grouped by age (Map<Integer, List<Employee>>)
     static void groupByAge() {
         System.out.println("Group by age:");
@@ -83,7 +82,6 @@ public class EmployeeStreamExamples {
                 .collect(groupingBy(e -> e.age));
         byAge.forEach((age, list) -> System.out.println(age + " -> " + list));
     }
-
     // 3) Highest paid employee (Optional<Employee>)
     static void highestPaidEmployee() {
         System.out.println("Highest paid:");
@@ -91,7 +89,6 @@ public class EmployeeStreamExamples {
                 .max(Comparator.comparingDouble(e -> e.salary))
                 .ifPresent(System.out::println);
     }
-
     // 4) Sum of salaries using reduce and using collector (two ways)
     static void sumSalaries() {
         System.out.println("Sum of salaries:");
@@ -102,7 +99,6 @@ public class EmployeeStreamExamples {
                 .reduce(0.0, Double::sum);
         System.out.println(sum1 + " / " + sum2);
     }
-
     // 5) Partition employees by whether they have an office address
     static void partitionByHasOffice() {
         System.out.println("Partition by has office address:");
@@ -111,7 +107,6 @@ public class EmployeeStreamExamples {
                         e.addresses.stream().anyMatch(a -> "office".equalsIgnoreCase(a.type))));
         partition.forEach((k, v) -> System.out.println(k + " -> " + v));
     }
-
     // 6) Map of state -> count of employees having any address in that state
     static void stateToEmployeeCount() {
         System.out.println("state -> employee count:");
@@ -122,7 +117,6 @@ public class EmployeeStreamExamples {
                 .collect(groupingBy(Map.Entry::getKey, counting()));
         System.out.println(counts);
     }
-
     // 7) Get comma-joined employee names sorted by salary desc
     static void joinedNamesBySalaryDesc() {
         System.out.println("Joined names by salary desc:");
@@ -133,18 +127,15 @@ public class EmployeeStreamExamples {
                 .collect(joining(", "));
         System.out.println(joined);
     }
-
     // 8) Find employees who live in a given city (case-insensitive) using Predicate and method ref
     static void employeesInCity(String city) {
         System.out.println("Employees in city: " + city);
         Predicate<Employee> inCity = e -> e.addresses != null &&
                 e.addresses.stream().anyMatch(a -> a.city.equalsIgnoreCase(city));
-        List<Employee> list = sampleEmployees().stream()
-                .filter(inCity)
+        List<Employee> list = sampleEmployees().stream().filter(inCity)
                 .collect(toList());
         System.out.println(list);
     }
-
     // 9) Nested grouping: Map<state, Map<type, List<Employee>>>
     static void nestedGroupingStateType() {
         System.out.println("Nested grouping state -> type -> employees:");
@@ -156,17 +147,14 @@ public class EmployeeStreamExamples {
                                 mapping(Map.Entry::getValue, toList()))));
         System.out.println(nested);
     }
-
     // 10) Top N (k highest salaries) employees using stream and limit
     static void topNSalaries(int k) {
         System.out.println(" Top " + k + " salaries:");
         List<Employee> top = sampleEmployees().stream()
                 .sorted(Comparator.comparingDouble((Employee e) -> e.salary).reversed())
-                .limit(k)
-                .collect(toList());
+                .limit(k).collect(toList());
         System.out.println(top);
     }
-
     // 11) Use Collectors.summarizingDouble to get salary statistics
     static void salaryStatistics() {
         System.out.println("Salary statistics:");
@@ -174,7 +162,6 @@ public class EmployeeStreamExamples {
                 .collect(summarizingDouble(e -> e.salary));
         System.out.println(stats);
     }
-
     // 12) Build Map<id, Employee> but handle duplicate ids safely (keep higher salary)
     static void toMapHandleDuplicates() {
         System.out.println("Map<id,employee> keep higher salary on duplicate id:");
@@ -186,7 +173,6 @@ public class EmployeeStreamExamples {
                         (e1, e2) -> e1.salary >= e2.salary ? e1 : e2));
         System.out.println(map);
     }
-
     // 13) Parallel stream example: compute sum of salaries in parallel (careful: avoid side-effects)
     static void parallelSumSalaries() {
         System.out.println("Parallel sum salaries:");
@@ -194,7 +180,6 @@ public class EmployeeStreamExamples {
                 .mapToDouble(e -> e.salary).sum();
         System.out.println(sum);
     }
-
     // 14) Custom collector (example): collect all cities into a TreeSet (sorted unique)
     static void collectCitiesToTreeSet() {
         System.out.println("Collect cities to TreeSet (sorted unique):");
@@ -204,7 +189,6 @@ public class EmployeeStreamExamples {
                 .collect(Collectors.toCollection(TreeSet::new));
         System.out.println(cities);
     }
-
     // 15) Defensive: safe stream processing with Optionals (employee with maybe-null addresses)
     static void safeProcessingWithOptional() {
         System.out.println("Safe processing with Optional:");
@@ -229,8 +213,7 @@ public class EmployeeStreamExamples {
                 .orElse(null));
         return maxMinEmp;
     }
-
-    // 16) Min & Max salary employee using teeing
+    // 17) Min & Max salary employee using teeing
     public static Map<String, Employee> minMaxSalary() {
         return sampleEmployees().stream()
                 .collect(Collectors.teeing(
@@ -242,16 +225,14 @@ public class EmployeeStreamExamples {
                         )
                 ));
     }
-
-    // 17) Immutable list of sorted names
+    // 18) Immutable list of sorted names
     public static List<String> immutableSortedNames() {
         return sampleEmployees().stream()
                 .map(Employee::getName)
                 .sorted()
                 .collect(collectingAndThen(toList(), Collections::unmodifiableList));
     }
-
-    // 18) State -> set of city strings (flatMapping)
+    // 19) State -> set of city strings (flatMapping)
     public static Map<String, Set<String>> stateCityMapping() {
         return sampleEmployees().stream()
                 .collect(groupingBy(
@@ -263,8 +244,7 @@ public class EmployeeStreamExamples {
                         )
                 ));
     }
-
-    // 19) Multi-level sorting
+    // 20) Multi-level sorting
     public static List<Employee> multiLevelSorting() {
         return sampleEmployees().stream()
                 .sorted(Comparator.comparingDouble(Employee::getSalary).reversed()
@@ -272,14 +252,11 @@ public class EmployeeStreamExamples {
                         .thenComparing(Employee::getName))
                 .toList();
     }
-
-    // 20) Employee with longest name
+    // 21) Employee with longest name
     public static Optional<Employee> longestNameEmployee() {
         return sampleEmployees().stream()
                 .reduce((e1, e2) -> e1.getName().length() >= e2.getName().length() ? e1 : e2);
     }
-
-
     public static void main(String[] args) {
         distinctCities();
         groupByAge();
