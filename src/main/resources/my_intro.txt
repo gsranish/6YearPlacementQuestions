@@ -1,5 +1,5 @@
 Good morning, and thank you for the opportunity to introduce myself.
-My name is Anish, and I’m a Senior Software Engineer with around seven years of experience in designing and
+My name is Anish, and I’m a Senior Software Engineer with around 7 years of experience in designing and
 developing enterprise-level backend applications using Java, Spring Boot, and microservices architecture.
 
 Throughout my career, I’ve been responsible for end-to-end backend development — from understanding business
