@@ -1,0 +1,70 @@
+Good morning, and thank you for the opportunity to introduce myself.
+My name is Anish, and I’m a Senior Software Engineer with around seven years of experience in designing and
+developing enterprise-level backend applications using Java, Spring Boot, and microservices architecture.
+
+Throughout my career, I’ve been responsible for end-to-end backend development — from understanding business
+requirements to building, testing, and deploying scalable APIs.
+I have strong hands-on experience with Spring Boot, Spring WebFlux, JPA/Hibernate, and PL/SQL, along with
+practical exposure to microservice integration, performance tuning, and AWS cloud deployment.
+
+⸻
+🚀 Current Project – IAG Cargo Portal Integration
+
+Currently, I’m working on the IAG Cargo Portal Application, where our goal is to integrate new partner
+airlines like Qatar Airways and British Airways into the IAG Cargo system.
+
+My key responsibilities include:
+	•	Understanding requirements directly from the Product Owner and Business Analyst.
+	•	Participating in Agile ceremonies – sprint planning, stand-ups, retrospectives, and demos.
+	•	Executing tests, analyzing results, and logging defects in JIRA.
+	•	Working with HTTP methods (GET, POST, PUT, DELETE) to test and validate backend API flows.
+	•	Implementing Controller and Service layers for IAG Client, Splitter, and Common Data Model modules.
+	•	Creating JUnit test cases for both positive and negative scenarios.
+	•	Developing dynamic and static report generation using the Jasper Framework and auto-complete functionality.
+	•	Building CriteriaBuilder and JPA Specifications to fetch data efficiently from Oracle DB.
+	•	Integrating these services into the existing microservice architecture.
+	•	Supporting team collaboration, guiding new joiners, and assisting with knowledge sharing and reviews.
+
+This project has strengthened my expertise in API integration, microservice orchestration, and performance
+optimization, while helping me grow as a collaborative and mentoring team member.
+
+⸻
+
+🌐 Past Project – Yes Connect (Yes Bank)
+
+Previously, I worked on the Yes Connect project for Yes Bank (Aug 2020 – Aug 2021), which integrated multiple
+partner banking channels such as Airtel Payments Bank, HDFC Bank, and Khosla Labs into Yes Bank’s ecosystem.
+(🔗 URL: https://yesconnect.yesbank.in/)
+
+My responsibilities included:
+	•	Gathering and analyzing requirements with BAs and Tech Leads.
+	•	Developing Business and Integration layers using Spring Boot.
+	•	Consuming REST APIs from various partner banks.
+	•	Implementing centralized logging using Log4J.
+	•	Logging and verifying defects in JIRA during testing.
+	•	Developing assigned user stories as part of the sprint cycle.
+
+This project gave me strong exposure to secure API integration, agile development, and client communication in the
+fintech domain.
+
+⸻
+
+☁️ Technical Strengths
+
+Apart from project experience, I’ve developed strong hands-on skills in:
+	•	AWS Cloud – ECS, API Gateway, CloudWatch, S3
+	•	Resilience4j, Zipkin, and Redis caching for reliability and performance
+	•	Concurrency and version control handling in JPA and PL/SQL
+	•	Performance tuning, debugging, and clean architecture design
+
+⸻
+
+🤝 Work Ethic & Learning Curiosity
+
+I strongly believe in continuous learning and staying updated with the latest technology trends.
+Whenever I come across a new concept — whether it’s a framework, design pattern, or cloud tool — I make it a
+point to explore, experiment, and understand it deeply.
+
+This curiosity has helped me adapt quickly to evolving technologies like Spring WebFlux, Reactive Streams, and
+AWS services, and apply them effectively in real projects.
+I also enjoy sharing my learnings with the team, contributing to a culture of collective growth and improvement.
