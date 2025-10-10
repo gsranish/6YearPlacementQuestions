@@ -1,11 +1,22 @@
 Good morning, and thank you for the opportunity to introduce myself.
-My name is Anish, and I’m a Senior Software Engineer with around 7 years of experience in designing and
+Good morning! My name is Anish Kumar, and I’m a Senior Software Engineer with over 7 years of experience in designing and
 developing enterprise-level backend applications using Java, Spring Boot, and microservices architecture.
 
 Throughout my career, I’ve been responsible for end-to-end backend development — from understanding business
-requirements to building, testing, and deploying scalable APIs.
+requirements to building, testing, and deploying scalable APIs.I’ve been involved in product development, support,
+and migration projects across the BFSI and Travel & Transportation (TTH) domains. I’ve built strong expertise in
+backend microservice architecture, API development, and cloud integration.
+
+I have hands-on experience with Spring Boot, Spring Data JPA, RESTful Web Services, Spring Security, and JWT-based
+authentication. I’ve also worked with AWS cloud services such as Lambda, API Gateway, CloudWatch, S3, and EC2,
+mainly for application monitoring and serverless deployments.
 I have strong hands-on experience with Spring Boot, Spring WebFlux, JPA/Hibernate, and PL/SQL, along with
 practical exposure to microservice integration, performance tuning, and AWS cloud deployment.
+
+In terms of database work, I’ve used both MySQL and Oracle, and I’m very comfortable writing complex SQL queries,
+stored procedures, and performance-tuned joins.
+I also follow Agile methodology, participating in all ceremonies — daily stand-ups, sprint planning,
+backlog grooming, retrospectives, and demos — to ensure smooth collaboration and delivery.
 
 ⸻
 🚀 Current Project – IAG Cargo Portal Integration
@@ -28,7 +39,17 @@ My key responsibilities include:
 This project has strengthened my expertise in API integration, microservice orchestration, and performance
 optimization, while helping me grow as a collaborative and mentoring team member.
 
-⸻
+Earlier, I was part of the SEI Wealth Platform Project, where I focused on bug fixing, feature enhancement,
+deployment automation using Jenkins, and real-time monitoring using Kibana and Dynatrace.
+
+Before Coforge, I worked with Xebia IT Architects on the YES Connect Project for YES Bank, where I integrated multiple
+partner APIs such as Airtel Payments Bank and HDFC Bank.
+I was responsible for implementing the Business and Integration layers, consuming REST APIs, managing logging
+using Log4J, and supporting full sprint cycle development and defect tracking through JIRA.
+
+I also have prior experience working on Lending Point and internal service portal projects, giving me exposure to
+data movement, API validation, and microservice integration.
+
 
 🌐 Past Project – Yes Connect (Yes Bank)
 
