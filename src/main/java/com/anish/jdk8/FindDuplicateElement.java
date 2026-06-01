@@ -7,7 +7,7 @@ import java.util.List;
 // How to find duplicate elements in a given integers list in java using Stream functions?
 public class FindDuplicateElement {
 
-    public static void main(String[] args) {
+    public static void main() {
 
         List<Integer> numbers = Arrays.asList(1, 2, 3,33, 2, 4, 5, 5,2, 1);
         // Find duplicate elements using Stream API

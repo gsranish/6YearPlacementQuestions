@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class ConcateTwoStreamExample {
 
-    public static void main(String[] args) {
+    public static void main() {
 
         List<String> list1 = Arrays.asList("Java", "8");
         List<String> list2 = Arrays.asList("explained", "through", "programs");

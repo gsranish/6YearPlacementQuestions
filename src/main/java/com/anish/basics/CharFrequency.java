@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CharFrequency {
 
-    public static void main(String[] args) {
+    public static void main() {
         String input = "AAABBCCAAEEE";
         List<String> charsC = new ArrayList<>();
         int count = 1;

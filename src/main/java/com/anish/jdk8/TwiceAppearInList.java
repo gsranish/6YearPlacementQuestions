@@ -39,7 +39,7 @@ public class TwiceAppearInList {
 
     }
 
-    public static void main(String[] args) {
+    public static void main() {
         // Test case 1: Array with duplicates
         int[] nums1 = {1, 2, 3, 1};
         System.out.println("Array [1, 2, 3, 1] contains duplicates: " + containsDuplicate1(nums1));
