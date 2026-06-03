@@ -21,9 +21,12 @@ public class UsingThread {
         public void run(){
             for (int i =0; i<5; i++){
                 System.out.println("Hello");
-                try {
-                    Thread.sleep(750);
-                } catch (InterruptedException e) {}
+                    try {
+                        Thread.sleep(750);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    }
             }
         }
     }

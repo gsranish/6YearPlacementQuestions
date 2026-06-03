@@ -10,8 +10,7 @@ class Resource {
         System.out.println("put Resource : " + number);
         this.number = number;
         this.valueSet = true;
-        notify();
-
+        notifyAll();
     }
 
     public synchronized int get() throws InterruptedException {
@@ -20,7 +19,7 @@ class Resource {
         }
         System.out.println("get Resource :  " + number);
         this.valueSet = false;
-        notify();
+        notifyAll();
         return number;
     }
 }
@@ -63,16 +62,19 @@ class Consumer implements Runnable {
     }
     @Override
     public void run() {
-        int i = 0;
         while (true) {
             try {
                 resource.get();
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                Thread.currentThread().interrupt();
+                return;
             }
             try {
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
         }
     }
 }
@@ -81,8 +83,8 @@ public class ProduceConsumerProg {
 
     static void main() {
         Resource resource = new Resource();
-        Producer producer = new Producer(resource);
-        Consumer consumer = new Consumer(resource);
+        new Producer(resource);
+        new Consumer(resource);
     }
 
 }

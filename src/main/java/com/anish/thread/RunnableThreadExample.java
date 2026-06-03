@@ -1,6 +1,7 @@
 package com.anish.thread;
 
 class Hi implements Runnable {
+    @Override
     public void run(){
         for (int i = 0; i < 5; i++) {
             try {
@@ -14,6 +15,7 @@ class Hi implements Runnable {
     }
 }
 class Hello implements Runnable {
+    @Override
     public void run(){
         for (int i = 0; i < 5; i++) {
             try {
@@ -30,7 +32,7 @@ public class RunnableThreadExample {
 
     static void main() throws InterruptedException {
         Hi hi = new Hi();
-        Hello hello = new Hello();;
+        Hello hello = new Hello();
         hi.run();
         Thread.sleep(50);
         hello.run();
