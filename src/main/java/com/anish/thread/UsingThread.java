@@ -15,7 +15,6 @@ public class UsingThread {
             }
         }
     }
-
     private static class Hello extends Thread{
         @Override
         public void run(){
