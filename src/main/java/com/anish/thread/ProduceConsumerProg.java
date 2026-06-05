@@ -22,17 +22,13 @@ class Resource {
         return number;
     }
 }
-
 class Producer implements Runnable {
-
     private final Resource resource;
-
     public Producer(Resource resource) {
         this.resource = resource;
         Thread t = new Thread(this,"Producer Thread");
         t.start();
     }
-
     @Override
     public void run() {
         int i = 0;
@@ -51,14 +47,12 @@ class Producer implements Runnable {
         }
     }
 }
-
 class Consumer implements Runnable {
     private final Resource resource;
     public Consumer(Resource resource) {
         this.resource = resource;
         Thread t = new Thread(this,"Consumer Thread");
         t.start();
-
     }
     @Override
     public void run() {
@@ -79,13 +73,10 @@ class Consumer implements Runnable {
         }
     }
 }
-
 public class ProduceConsumerProg {
-
     static void main() {
         Resource resource = new Resource();
         new Producer(resource);
         new Consumer(resource);
     }
-
 }
