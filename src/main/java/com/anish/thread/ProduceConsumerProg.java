@@ -12,7 +12,6 @@ class Resource {
         this.valueSet = true;
         notifyAll();
     }
-
     public synchronized int get() throws InterruptedException {
         while (!valueSet) {
             wait();
@@ -37,6 +36,7 @@ class Producer implements Runnable {
     @Override
     public void run() {
         int i = 0;
+        // infinite loop to produce the resource
         while (true) {
             try {
                 resource.put(i++);
@@ -62,6 +62,7 @@ class Consumer implements Runnable {
     }
     @Override
     public void run() {
+        // infinite loop to consume the resource
         while (true) {
             try {
                 resource.get();
