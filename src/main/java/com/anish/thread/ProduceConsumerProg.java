@@ -7,7 +7,7 @@ class Resource {
        while (valueSet) {
            wait();
        }
-        System.out.println("put Resource : " + number);
+        System.out.println("Put Resource : " + number);
         this.number = number;
         this.valueSet = true;
         notifyAll();
@@ -17,7 +17,7 @@ class Resource {
         while (!valueSet) {
             wait();
         }
-        System.out.println("get Resource :  " + number);
+        System.out.println("Get Resource :  " + number);
         this.valueSet = false;
         notifyAll();
         return number;
