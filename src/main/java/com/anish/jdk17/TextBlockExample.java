@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class TextBlockExample {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         try {
             TemplateService service = new TemplateService(args);
             String payload = service.generatePayload();

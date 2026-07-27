@@ -33,8 +33,7 @@ final class Anjali implements Human
 
 public class TestSealedInterface {
 
-
-    public static void main(String[] args) {
+    static void main() {
         SealedInterface sealedInterface = new FinalClass1();
         sealedInterface.shut();
         FinalClass1 finalClass1 = new FinalClass1();

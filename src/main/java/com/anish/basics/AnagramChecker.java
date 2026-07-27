@@ -35,7 +35,7 @@ public class AnagramChecker {
         return Arrays.equals(arr1, arr2);
     }
 
-    public static void main(String[] args) {
+    static void main() {
         String str1 = "listen";
         String str2 = "silent";
         // Original logic
