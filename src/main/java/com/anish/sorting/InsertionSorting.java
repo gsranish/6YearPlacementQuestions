@@ -15,7 +15,7 @@ public class InsertionSorting {
         return arr;
     }
 
-    public static void main(String[] args) {
+     static void main() {
         int[] arr = {5, 2, 9, 1, 5, 6};
         System.out.println("Original Array: ");
         for (int num : arr) {

@@ -12,7 +12,7 @@ public class LinearSearch {
             }
         }
         System.out.println(target+" Element not found ");
-        return -1; // if element doesn't exist
+        return -1;// if element doesn't exist
     }
 
     static void main() {
