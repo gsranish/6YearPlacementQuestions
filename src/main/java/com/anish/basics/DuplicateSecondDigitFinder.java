@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 
 public class DuplicateSecondDigitFinder {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(121, 123, 121,420,343,786,923,285,8234556);
         Set<Integer> uniqueDuplicates = findDuplicatesWithSecondDigitUnique(numbers);
         List<Integer> duplicates = findDuplicatesWithSecondDigit(numbers);
-        System.out.println(" duplicates : "+ duplicates); // Output: [121, 123]
+        System.out.println(" Unique Sorted Duplicates : "+ duplicates); // Output: [121, 123]
         System.out.println(" Unique Duplicates : " + uniqueDuplicates);
     }
 

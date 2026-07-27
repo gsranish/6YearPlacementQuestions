@@ -6,7 +6,7 @@ public class SubClass extends SuperClass {
         System.out.println("Sub class method");
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         SubClass subClass = new SubClass();
         subClass.exampleMethod();
         SuperClass superClass = new SuperClass();

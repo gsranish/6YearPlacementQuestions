@@ -8,7 +8,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EmployeeListToMapExample {
-    public static void main(String[] args) {
+
+    static void main(String[] args) {
         List<Employee> employees = Arrays.asList(
                 new Employee(101, "Alice",null),
                 new Employee(102, "Bob",null),

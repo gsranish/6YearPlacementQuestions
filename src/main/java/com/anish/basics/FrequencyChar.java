@@ -21,7 +21,7 @@ public class FrequencyChar {
         System.out.println(stationeryList);
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         String inputString = "Java Concept Of The Day";
         getFrequencyChar(inputString);
         List<String> stationeryList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");

@@ -31,6 +31,20 @@ public class PurchaseRestCallsAsyncExecutor {
     public void updatePurchasesHandlingExceptions(List<Purchase> purchases) {
         purchases.forEach(this::updatePurchaseHandlingExceptions);
     }
+    public String getOrderDescription(String orderId) {
+        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/orders/%s", BASE_URL, orderId), String.class);
+        return result.getBody();
+    }
+
+    public String getPaymentDescription(String paymentId) {
+        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/payments/%s", BASE_URL, paymentId), String.class);
+        return result.getBody();
+    }
+
+    public String getUserName(String userId) {
+        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/users/%s", BASE_URL, userId), String.class);
+        return result.getBody();
+    }
 
     public void updatePurchase(Purchase purchase) {
         CompletableFuture.allOf(CompletableFuture.supplyAsync(() -> getOrderDescription(purchase.getOrderId()))
@@ -56,24 +70,6 @@ public class PurchaseRestCallsAsyncExecutor {
                                 .orTimeout(1, TimeUnit.SECONDS)
                                 .handle(handleGracefully()))
                 .join();
-    }
-
-    public String getOrderDescription(String orderId) {
-        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/orders/%s", BASE_URL, orderId), String.class);
-
-        return result.getBody();
-    }
-
-    public String getPaymentDescription(String paymentId) {
-        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/payments/%s", BASE_URL, paymentId), String.class);
-
-        return result.getBody();
-    }
-
-    public String getUserName(String userId) {
-        ResponseEntity<String> result = restTemplate.getForEntity(format("%s/users/%s", BASE_URL, userId), String.class);
-
-        return result.getBody();
     }
 
     private static BiFunction<Void, Throwable, Void> handleGracefully() {

@@ -12,8 +12,7 @@ public class FindAllUniqueCharacters {
                 .collect(Collectors.toCollection(LinkedHashSet::new))));
     }
 
-    public static void main(String[] args) {
-
+    static void main(String[] args) {
         System.out.println("FindUniqueCharacters");
         findAllUniqueCharacters("anish is anish good boy");
     }

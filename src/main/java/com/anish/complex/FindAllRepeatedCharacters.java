@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class FindAllRepeatedCharacters {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         String str ="Coforge Software Company";
         List<Character> charlist = str.chars()

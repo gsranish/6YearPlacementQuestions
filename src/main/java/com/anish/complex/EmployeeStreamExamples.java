@@ -257,7 +257,7 @@ public class EmployeeStreamExamples {
         return sampleEmployees().stream()
                 .reduce((e1, e2) -> e1.getName().length() >= e2.getName().length() ? e1 : e2);
     }
-    public static void main(String[] args) {
+    static void main(String[] args) {
         distinctCities();
         groupByAge();
         highestPaidEmployee();

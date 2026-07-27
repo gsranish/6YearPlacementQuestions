@@ -159,7 +159,7 @@ public class ArraysStreamsCheatSheet {
         System.out.println("Subarrays with sum " + target + ": " + subarrays);
     }
     // Main to demo all
-    public static void main(String[] args) {
+    static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 4, 5};
         int[] arr1 = {1, 3, 5};
         int[] arr2 = {2, 3, 6, 5};

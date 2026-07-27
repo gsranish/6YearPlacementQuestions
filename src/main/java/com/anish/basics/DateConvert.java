@@ -6,12 +6,15 @@ import java.time.LocalDate;
 public class DateConvert {
 
     static LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
-        return new Date(dateToConvert.getTime()).toLocalDate();
+        return dateToConvert.toLocalDate();
     }
 
-    public static void main(String[] args)
+    static void main()
     {
-        Date date = new Date(2024,2,2);
-        System.out.println(convertToLocalDateViaSqlDate(date));
+        // Create a sql.Date from a LocalDate
+        LocalDate localDate = LocalDate.of(2026, 6, 15);
+        Date sqlDate = Date.valueOf(localDate);
+        System.out.println("SQL Date: " + sqlDate);
+        System.out.println("Converted to LocalDate: " + convertToLocalDateViaSqlDate(sqlDate));
     }
 }

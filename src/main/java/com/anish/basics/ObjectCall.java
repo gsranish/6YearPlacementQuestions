@@ -10,8 +10,7 @@ public class ObjectCall {
         System.out.println("String class method");
     }
 
-
-    public static void main(String[] args) {
+    static void main(String[] args) {
         method1(null); // prints String class method
     }
 

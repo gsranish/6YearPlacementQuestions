@@ -14,7 +14,7 @@ public class RemoveDup {
             System.out.println(input);
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         List<String> listOfStrings = Arrays.asList("Java", "Python", "C#", "Java", "Kotlin", "Python");
         System.out.println(LocalDate.now());
         removeDuplicate(listOfStrings);
