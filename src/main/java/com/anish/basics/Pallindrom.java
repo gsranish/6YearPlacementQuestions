@@ -15,6 +15,9 @@ public class Pallindrom {
         List<String> inputList = new ArrayList<>();
         inputList.add("anish");
         inputList.addFirst("ana");
-        out.println(inputList.stream().distinct().filter(Pallindrom::isPallindrom).collect(Collectors.toList()));
+        out.println(inputList.stream()
+                .distinct()
+                .filter(Pallindrom::isPallindrom)
+                .collect(Collectors.toList()));
     }
 }
